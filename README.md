@@ -3,14 +3,14 @@
 
 **Основной скрипт для EU-VPS**
 ```
-bash -c "$(curl -L https://raw.githubusercontent.com/EtoDets/autoXRAY_telemt-customized/refs/heads/main/autoXRAY_telemt-EU_v1.sh)" -- поддомен1.Домен.Ком
+bash -c "$(curl -L https://raw.githubusercontent.com/EtoDets/autoXRAY_telemt-customized/refs/heads/main/autoXRAY_telemt-EU_v1.sh?token=GHSAT0AAAAAADYQQBMEPXV3U4NWGDC7PXNI2PFCWPQ)" -- поддомен1.Домен.Ком
 ```
 
 Всех дольше будут работать каскадные варианты подключения.
 
 **Для моста RU-VPS**
 ```
-bash -c "$(curl -L https://raw.githubusercontent.com/EtoDets/autoXRAY_telemt-customized/refs/heads/main/autoXRAYselfRUbrEUxhttp_telemt-RU_v2.sh)" -- поддомен2.Домен.Ком "vless://xhttp"
+bash -c "$(curl -L https://raw.githubusercontent.com/EtoDets/autoXRAY_telemt-customized/refs/heads/main/autoXRAYselfRUbrEUxhttp_telemt-RU_v2.sh?token=GHSAT0AAAAAADYQQBMEW7FZO24JJGOYHLZC2PFCW6A)" -- поддомен2.Домен.Ком "vless://xhttp"
 ```
 
 Также теперь можно использовать несколько xhttp конфигов, все они будут добавлены в мост.
