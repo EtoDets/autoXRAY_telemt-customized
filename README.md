@@ -28,3 +28,7 @@ systemctl stop telemt; systemctl disable telemt; rm -f /etc/systemd/system/telem
 443 XRAY -> MTP TELEMT -> сайт заглушка
 
 Конфигурация: /etc/telemt/telemt.toml
+
+
+
+Автор - https://github.com/xVRVx/autoXRAY
