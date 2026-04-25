@@ -868,8 +868,8 @@ configListLink="https://$DOMAIN/$path_subpage.html"
 } > "$WEB_PATH/${path_subpage}.txt"
 echo -e "${GRN}✅ Файл .txt создан: $rawSubPageLink${NC}"
 
-# echo -e "\n\n${GRN}Устанавливаем MTProto FakeTLS ${NC}"
-# source <(curl -sL https://github.com/xVRVx/autoXRAY/raw/refs/heads/main/test/telemt-test.sh)
+echo -e "\n\n${GRN}Устанавливаем MTProto FakeTLS ${NC}"
+source <(curl -sL https://github.com/xVRVx/autoXRAY/raw/refs/heads/main/test/telemt-test.sh)
 
 echo -e "\n\n${GRN}Создаем страницу подписки ${NC}"
 cat > "$WEB_PATH/$path_subpage.html" <<EOF
@@ -943,12 +943,12 @@ cat >> "$WEB_PATH/$path_subpage.html" <<EOF
     <a href="${SOCKS5_url}" target="_blank" class="btn-action qr-btn" title="автодобавление моста в тг" style="text-decoration:none">✈️ Add to TG</a>
 </div>
 
-<!-- <div class="config-row">
+<div class="config-row">
     <div class="config-label">Мост MTProtoFakeTLS (TG)</div>
     <div class="config-code" id="mtproto">${MTProto}</div>
     <button class="btn-action copy-btn" onclick="copyText('mtproto', this)">Copy</button>
     <a href="${MTProto}" target="_blank" class="btn-action qr-btn" title="автодобавление моста в тг" style="text-decoration:none">✈️ Add to TG</a>
-</div> -->
+</div>
 
 <h2>💠 Все конфиги вместе</h2>
 <div class="config-row">
@@ -982,8 +982,8 @@ ${GRN}$subPageLink${NC}
 ${YEL}Ссылка на сохраненные конфиги (Web UI) ${NC}
 ${GRN}$configListLink ${NC}
 
-# ${YEL}MTProto FakeTLS для ТГ${NC}
-# ${GRN}$MTProto ${NC}
+${YEL}MTProto FakeTLS для ТГ${NC}
+${GRN}$MTProto ${NC}
 
 Скопируйте подписку в специализированное приложение:
 - iOS: Happ или v2RayTun или v2rayN
@@ -1010,4 +1010,5 @@ echo -e "${GRN}✅ Ссылки сохранены в файл: $LINKS_FILE${NC}
 # --- Создаём симлинки для удобного доступа ---
 ln -sfn /usr/local/etc/xray/ ~/xray-config
 ln -sfn /var/www/ ~/web-config
+ln -sfn /var/log/xray/ ~/xray-log
 echo -e "${GRN}✅ Симлинки созданы: ~/xray-config -> /usr/local/etc/xray/ | ~/web-config -> /var/www/${NC}"
